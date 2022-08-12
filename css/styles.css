@@ -1,0 +1,612 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #F7F7F2;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+nav {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ced4da22;
+    font-family: 'Courier New', Courier, monospace;
+    backdrop-filter: blur(2px)
+}
+
+.logo img {
+    width: 150px;
+    height:auto;
+    margin-left: 20px;
+    padding-top: 25px;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 75px;
+    background: #ced4da;
+    float: right;
+    text-align: center;
+    transition: all .5s;
+    
+}
+
+.menu li {
+    opacity: 0;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.menu li a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    color: #0279e5;
+    transition: 0.5s;
+}
+
+.hamburger-btn {
+    display: block;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 75px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .menu {
+    height: 100vh;
+}
+
+#check:checked ~ .menu li {
+    opacity: 1;
+}
+
+.hero {
+    background-image: url(../images/banner.png) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -75px;
+}
+
+.hero-text {
+    overflow:hidden;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.herobutton {
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0.29);
+    color: white;
+    transition: all .2s ease-in-out;
+    font-size: 16px;
+}
+
+.herobutton:hover {
+    border: solid 1px white;
+    transform: scale(1.1);
+}
+
+.herobutton:active {
+    background-color: white;
+    color: #292F36;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.wrapper {
+    width: min(100% - 2rem, 1000px);
+    margin-inline: auto;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+    padding: 25px;
+}
+
+.aboutimg {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+    padding-bottom: 30px;
+}
+
+.fa-brands {
+    padding: 20px;
+    font-size: 30px;
+    
+    text-align: center;
+    text-decoration: none;
+}
+
+.about :nth-child(7) {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.fa-brands {
+    border: none;
+    transition: all .2s ease-in-out;
+    width: 40px;
+}
+
+.fa-brands:hover {
+    transform: scale(1.1);
+    color: blue;
+}
+
+.fa-brands:active {
+    color: blue;
+}
+
+.fa-solid {
+    border: none;
+    transition: all .2s ease-in-out;
+    width: 40px;
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    color: blue;
+}
+
+.fa-solid:active {
+    color: blue;
+}
+
+/* About-page */
+
+.social > *:not(:last-child) {
+    margin-top: 40px;
+    margin-right: 90px; 
+} 
+
+
+.hero-page {
+    background-image: url(../images/banner.png) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 920px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -75px;
+}
+
+.about-footer {
+    background-color: #ced4da;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.about-footer img {
+    width: 108px;
+    height:auto;
+}
+
+.about-footer p {
+    display: none;
+}
+
+/* Portfolio */
+
+.portfolio {
+    text-align: center;
+    padding: 25px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: min(100% - 2rem, 1400px);
+    margin-inline: auto;
+    margin-top: 60px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+/* external css: flickity.css */
+
+.carousel {
+  width: auto;
+  
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
+}
+
+/* Services */
+
+.services {
+    text-align: center;
+    padding: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six";
+}
+
+.grid :nth-child(1) {
+    grid-area: one;
+}
+
+.grid :nth-child(2) {
+    grid-area: three;
+}
+
+.grid :nth-child(3) {
+    grid-area: five;
+}
+
+.grid :nth-child(4) {
+    grid-area: two;
+}
+
+.grid :nth-child(5) {
+    grid-area: four;
+}
+
+.grid :nth-child(6) {
+    grid-area: six;
+}
+
+.services img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid;
+}
+
+.services-text {
+    border: 1px solid;
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+    border-top: 0px;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+    padding: 25px;
+}
+
+/* Contact-page */
+
+    .contact-page {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .info{
+        text-align: center;
+        display: grid;
+        align-self: center;
+        gap: 50px;
+        margin-left: 20%;
+    }
+
+
+    .info button {
+        font-size: 14px;
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid;
+        width: 200px;
+    }
+
+    .info i {
+        font-size: 24px;
+    }
+/* footer */
+
+footer {
+    background-color: #ced4da;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+footer img {
+    width: 108px;
+    height:auto;
+}
+
+footer p {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+
+    .logo { 
+        margin-left: 25px;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    .menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        float: right;
+        text-align: right;
+        margin-right: 25px;
+        transition: none;
+    }
+
+    .menu li {
+        display: inline-block;
+        opacity: 1;
+        line-height: 100px;
+        margin: 0 20px;
+        transition:none;
+
+    }
+
+    .wrapper {
+        width: min(100% - 2rem, 1400px);
+        margin-inline: auto;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 100;
+    }
+    
+    /* ABOUT */
+
+
+    .about img {
+        float: left;
+        height: auto; 
+        width: auto; 
+        max-width: 600px; 
+        max-height: 600px;
+        padding-bottom: 30px;
+        margin-right: 20px;
+    }
+
+
+
+    .about p {
+        padding-top: 100px;
+        text-align: left;
+    }
+
+    .about button {
+        margin-bottom: 40px;
+        margin-top: 60px;
+        margin-left: 470px;
+    }
+
+    .fa-brands {
+        padding: 20px;
+        font-size: 30px;
+        
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .fa-solid {
+        padding: 20px;
+        font-size: 30px;
+        
+        text-align: center;
+        text-decoration: none;
+    }
+    
+
+    .about :nth-child(7) {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+
+    /* About-page */
+
+    .social > *:not(:last-child) {
+        margin-top: 40px;
+        margin-right: 200px; 
+    } 
+    
+    /* PORTFOLIO */
+    
+    .portfolio {
+        clear: left;
+        margin-top: 55px;
+    }
+
+        /* SERVICES */
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "one three five"
+            "two four six"
+            ;
+        }
+        
+        .grid :nth-child(1) {
+            grid-area: one;
+        }
+        
+        .grid :nth-child(2) {
+            grid-area: three;
+        }
+        
+        .grid :nth-child(3) {
+            grid-area: five;
+        }
+        
+        .grid :nth-child(4) {
+            grid-area: two;
+        }
+        
+        .grid :nth-child(5) {
+            grid-area: four;
+        }
+        
+        .grid :nth-child(6) {
+            grid-area: six;
+        }
+        .services img {
+            height: auto; 
+            width: auto; 
+            max-width: 300px; 
+            max-height: 300px;
+        }
+
+        .services-text {
+            border: 1px solid;
+            width: 212px;
+            height: 125px;
+            padding: 25px;
+            border-top: 0px;
+        }
+
+    /* Footer */
+
+    footer {
+        background-color: #ced4da;
+        text-align: center;
+        padding: 20px;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    footer img {
+        width: 150px;
+        height:auto;
+    }
+    
+    footer p {
+        display:block;
+    }
+
+    .about-footer {
+        background-color: #ced4da;
+        text-align: center;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .about-footer img {
+        width: 150px;
+        height:auto;
+    }
+    
+    .about-footer p {
+        display:block;
+    }
+}
